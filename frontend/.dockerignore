@@ -1,0 +1,36 @@
+# ============================================================
+# .dockerignore for Meeting Room Reservation System (Frontend)
+# 排除不需要进入构建上下文的文件与目录
+# ============================================================
+
+# 版本控制
+.git
+.gitignore
+
+# 依赖与构建产物（构建时由 npm ci 重新安装，由 vite build 重新生成）
+node_modules
+dist
+
+# IDE 与编辑器配置
+.vscode
+.idea
+
+# 环境变量文件（构建时通过 ARG 或运行时注入，不打入镜像）
+.env.local
+.env.*.local
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Docker 相关（避免递归）
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# 文档
+README.md
